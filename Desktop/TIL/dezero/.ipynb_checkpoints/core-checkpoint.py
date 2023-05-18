@@ -249,6 +249,10 @@ class Pow(Function):
         #x = self.inputs[0].data
         x = self.inputs
         c = self.c
+        
+        print(f'x:{x}')
+        print(f'c:{c}')
+        print(f'gy:{gy}')
 
         gx = c * x ** (c - 1) * gy
         return gx
