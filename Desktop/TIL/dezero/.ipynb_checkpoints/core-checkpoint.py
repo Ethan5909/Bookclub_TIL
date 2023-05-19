@@ -247,12 +247,13 @@ class Pow(Function):
 
     def backward(self, gy):
         #x = self.inputs[0].data
-        x = self.inputs
+        #x = self.inputs[0]
+        x, = self.inputs
         c = self.c
         
-        print(f'x:{x}')
-        print(f'c:{c}')
-        print(f'gy:{gy}')
+        #print(f'x:{x}')
+        #print(f'c:{c}')
+        #print(f'gy:{gy}')
 
         gx = c * x ** (c - 1) * gy
         return gx
